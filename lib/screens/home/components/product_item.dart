@@ -1,10 +1,11 @@
-import 'package:carrot_market_ui/models/product.dart';
 import 'package:flutter/material.dart';
+
+import '../../../models/product.dart';
+import 'product_detail.dart';
 
 class ProductItem extends StatelessWidget {
   final Product product;
-
-  const ProductItem({Key? key, required this.product}) : super(key: key);
+  ProductItem({required this.product});
 
   @override
   Widget build(BuildContext context) {
@@ -23,6 +24,7 @@ class ProductItem extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 16.0),
+          ProductDetail(product: product)
         ],
       ),
     );
